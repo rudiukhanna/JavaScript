@@ -5,5 +5,5 @@ alert('sum is' + " " +  (Number(a) + Number(b)));
 alert('difference is' + " " +  (a - b));
 alert('product is' + " " + (a * b));
 alert('quotient is' + " " + (a / b));
-alert('Well done');
+alert('Thank you!');
 
