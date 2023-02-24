@@ -1,9 +1,30 @@
-let a = prompt('Enter the first number', 0);
-let b = prompt('Enter the second number', 0);
+let a = prompt('Введіть перше число');
+let b = prompt('Введіть друге число');
 
-alert('sum is' + " " +  (Number(a) + Number(b)));
-alert('difference is' + " " +  (a - b));
-alert('product is' + " " + (a * b));
-alert('quotient is' + " " + (a / b));
-alert('Thank you!');
+if (a === '' || b === '') {
+  alert('Помилка: має бути введено 2 числа, виконання подальших операцій не можливе!');
+} else {
+  alert('Cума' + ' ' + (Number(a) + Number(b)));
+
+if ( a < b ) {
+    let message = confirm('Ви впевнені, що хочете продовжити операцію?');
+       if (message === true) {
+        alert('Різниця' + ' ' + (a - b));
+       };
+} else {
+  alert('Різниця' + ' ' + (a - b));
+}
+
+alert('Додаток' + ' ' + (a * b));
+
+if (b === '0') {
+  alert('Помилка: ділення не можливе!');
+} else {
+  alert('Ділення' + ' ' + (a / b));
+}
+
+}
+
+
+
 
