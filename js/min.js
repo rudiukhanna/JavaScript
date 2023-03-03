@@ -1,14 +1,14 @@
 // Пошук мінімального значення елемента масиву
 
-const arr1 = [2, 17, 53, 15, 105, 73, -7, 12, 0];
+const arr1 = [2, 17, 53, 15, 105, 73, -7, 12, 0, 27];
 
-let smallestElem = arr1[0]; 
-// роблю припущення, що перший елемент має мінімальне значення, та присвоюю його змінній;
+let smallestElem = Number.isNaN(arr1[0]); 
+
 
 for (let elem of arr1){
-    if (elem < smallestElem && typeof elem === 'number' ) {
+   if (elem < smallestElem) {
         smallestElem = elem;
-    }
+   }
 }
 
 console.log(smallestElem);

@@ -1,13 +1,12 @@
 // Пошук максимального значення елемента масиву
 
-const arr2 = [2, 17, 53, 15, 105, 73, -7, 12, 0];
+const arr2 = [2, 17, 53, 15, 105, 73, -7, 12, 0, 27];
 
-let biggestElem = arr2[0];
-// роблю припущення, що перший елемент має максимальне значення;
+let biggestElem = Number.isNaN(arr2[0]);
 
-for (let elem of arr2){
-    if(elem > biggestElem && typeof elem === 'number' ){
-        biggestElem = elem;
+for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i] > biggestElem) {
+        biggestElem = arr2[i];
     }
 }
 
