@@ -9,6 +9,7 @@ const potions = [
     return Object.keys(obj).length === 0;
   }
 
+  
   let res = isObjectEmpty({});
   console.log(res);
   res = isObjectEmpty({ name: "Stone skin", price: 520 });
