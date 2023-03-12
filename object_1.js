@@ -13,11 +13,15 @@ const potions = [
   //Об'єкт 
   const obj = {};
 
+
   // Перевірки
   let res = isObjectEmpty({});
   console.log(res);
+  
   res = isObjectEmpty({ name: "Stone skin", price: 520 });
   console.log(res);
 
   res = isObjectEmpty(obj);
   console.log(res)
+
+  
