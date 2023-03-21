@@ -12,6 +12,11 @@ function Accumulator(startingValue) {
     };
 }
 
+let acc = new Accumulator (2);
+console.log(acc.value);
+acc.increment;
+console.log(acc.value);
+
 
 // Конструктор CancelableAccumulator
 
@@ -19,8 +24,8 @@ function CancelableAccumulator(startingValue) {
     Accumulator.call(this, startingValue);
 }
 
-CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
-CancelableAccumulator.prototype.constructor = CancelableAccumulator;
+CancelableAccumulator.prototype = Object.create(Accumulator.prototype); 
+
 
 CancelableAccumulator.prototype.clear = function(){
     this.value = startingValue;
