@@ -1,32 +1,58 @@
-// Конструктор Accumulator
-
+// функція-конструктор Accumulator
 function Accumulator(startingValue) {
-    this.value = startingValue;
 
-    this.increment = function() {
-        this.value++;
-    };
+    if (typeof startingValue !== "number") {
+        throw new Error("Starting value must be a number");
+      }
 
-    this.decrement = function() {
-        this.value--;
-    };
-}
-
-let acc = new Accumulator (2);
-console.log(acc.value);
-acc.increment;
-console.log(acc.value);
+        this.value = startingValue;  
+ }
 
 
-// Конструктор CancelableAccumulator
+ Accumulator.prototype.increment = function() {
+    this.value++;
+ }
 
-function CancelableAccumulator(startingValue) {
+
+ Accumulator.prototype.decrement = function() {
+    this.value--;
+ }
+
+// Перевірка
+
+ let acc = new Accumulator(4);
+
+ console.log(acc.value);
+ acc.increment();
+ console.log(acc.value);
+ acc.decrement();
+ console.log(acc.value);
+
+
+
+ // Конструктор CancelableAccumulator
+
+ function CancelableAccumulator(startingValue) {
     Accumulator.call(this, startingValue);
-}
 
-CancelableAccumulator.prototype = Object.create(Accumulator.prototype); 
+    this.clear = function(){
+        this.value = startingValue;
+    }
+ }
+
+CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
 
 
-CancelableAccumulator.prototype.clear = function(){
-    this.value = startingValue;
-}
+// Перевірка
+ let cancAcc = new CancelableAccumulator(2);
+
+ console.log(cancAcc.value);
+
+ cancAcc.increment();
+ console.log(cancAcc.value);
+
+ cancAcc.increment();
+ console.log(cancAcc.value);
+
+ cancAcc.clear();
+ console.log(cancAcc.value);
