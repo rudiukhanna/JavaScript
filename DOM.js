@@ -105,3 +105,41 @@ addition(num1, num2);
 subtraction(num1, num2);
 multiplication(num1, num2);
 division(num1, num2);
+
+
+// Масиви
+
+function findMin(arr) {
+    let min = arr[0];
+
+    for (let elem of arr) {
+        if (typeof elem === 'number' && (min === arr[0] || elem < min)) {
+            min = elem;
+        }
+    }  
+        const result = min;
+        const resultElement = document.getElementById('min');
+        resultElement.textContent = result;
+        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        return result; 
+}
+
+
+function findMax(arr) {
+    let max = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+     if(typeof arr[i] === 'number' && ( max === arr[0] || arr[i] > max)) {
+      max = arr[i];
+     }
+}
+    const result = max;
+    const resultElement = document.getElementById('max');
+    resultElement.textContent = result;
+    resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+    return result; 
+}
+
+
+findMin([12, 25, 7, 20, 'hello']);
+findMax([12, 25, 7, 20, 'hello']);
