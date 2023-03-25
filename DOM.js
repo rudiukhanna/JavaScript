@@ -2,7 +2,7 @@ let num1 = prompt('num1');
 let num2 = prompt('num2');
 
 
-//  Функція для перевірки на числовой тип
+//  Функція для перевірки на числовий тип
 function areNumbers(num1,num2){
     if (isNaN(num1) || isNaN(num2)){
         return 'Arguments are not number type!';
@@ -11,13 +11,28 @@ function areNumbers(num1,num2){
     }
 }
 
-// Функція для перевірки на пусте введення
+// Функція для перевірки на порожнє введення
 function areEmpty(num1,num2){
     if (num1 === '' || num2 === ''){
         return 'The entered value cannot be empty';
        } else {
         return false;
        }
+}
+
+// Функція на встановлення кольору (градація)
+function setColor(result, resultElement) {
+    if (result < 0 && result >= -10) {
+        resultElement.style.color = 'rgb(248, 96, 96)';
+    } else if (result < -10 && result >= -100) {
+        resultElement.style.color = 'rgb(228, 26, 26)';
+    } else if (result < -100 && result >= -1000) {
+        resultElement.style.color = 'rgb(140, 14, 14)';
+    } else if (result < -1000 && result >= -10000) {
+        resultElement.style.color = 'rgb(87, 10, 10)';
+    } else if (result < -10000 && result >= -1000000) {
+        resultElement.style.color = 'rgb(41, 3, 3)';
+    }
 }
 
 
@@ -32,17 +47,8 @@ function addition(num1, num2) {
         const resultElement = document.getElementById('addition');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+       
+        setColor(result, resultElement);
         return result; 
     }
 }
@@ -61,17 +67,7 @@ function subtraction(num1,num2) {
         const resultElement = document.getElementById('subtraction');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+        setColor(result, resultElement);
         return result; 
        } else {
         return 'Operation was cancelled';
@@ -81,17 +77,7 @@ function subtraction(num1,num2) {
         const resultElement = document.getElementById('subtraction');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+        setColor(result, resultElement);
         return result; 
     }
 }
@@ -107,17 +93,7 @@ function multiplication(num1,num2) {
         const resultElement = document.getElementById('multiplication');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+        setColor(result, resultElement);
         return result; 
     }
 }
@@ -140,17 +116,7 @@ function division(num1,num2) {
         const resultElement = document.getElementById('division');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+        setColor(result, resultElement);
         return result; 
     }
 }
@@ -176,17 +142,7 @@ function findMin(arr) {
         const resultElement = document.getElementById('min');
         resultElement.textContent = result;
         resultElement.style.color = result < 0 ? 'red':'green';
-        if(result < 0 && result >= -10) {
-            return resultElement.style.color = 'rgb(248, 96, 96)';
-        } else if (result < -10 && result >= -100) {
-            return resultElement.style.color = 'rgb(228, 26, 26)';
-        } else if (result < -100 && result >= -1000) {
-            return resultElement.style.color = 'rgb(140, 14, 14)';
-        } else if ( result < -1000 && result >= -10000) {
-            return resultElement.style.color = 'rgb(87, 10, 10)';
-        } else if (result < -10000 && result >= -1000000) {
-            return resultElement.style.color = 'rgb(41, 3, 3)';
-        }
+        setColor(result, resultElement);
         return result; 
 }
 
@@ -203,20 +159,10 @@ function findMax(arr) {
     const resultElement = document.getElementById('max');
     resultElement.textContent = result;
     resultElement.style.color = result < 0 ? 'red':'green';
-    if(result < 0 && result >= -10) {
-        return resultElement.style.color = 'rgb(248, 96, 96)';
-    } else if (result < -10 && result >= -100) {
-        return resultElement.style.color = 'rgb(228, 26, 26)';
-    } else if (result < -100 && result >= -1000) {
-        return resultElement.style.color = 'rgb(140, 14, 14)';
-    } else if ( result < -1000 && result >= -10000) {
-        return resultElement.style.color = 'rgb(87, 10, 10)';
-    } else if (result < -10000 && result >= -1000000) {
-        return resultElement.style.color = 'rgb(41, 3, 3)';
-    }
+    setColor(result, resultElement);
     return result; 
 }
 
 
-findMin([12, 25, 7, 20, 'hello']);
+findMin([12, 25, 7, 20, 'hello', -1000]);
 findMax([12, 25, 7, 20, 'hello']);
