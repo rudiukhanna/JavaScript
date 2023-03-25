@@ -31,7 +31,18 @@ function addition(num1, num2) {
         const result = Number(num1) + Number(num2);
         const resultElement = document.getElementById('addition');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
     }
 }
@@ -49,7 +60,18 @@ function subtraction(num1,num2) {
         const result = num1 - num2;
         const resultElement = document.getElementById('subtraction');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
        } else {
         return 'Operation was cancelled';
@@ -58,7 +80,18 @@ function subtraction(num1,num2) {
         const result = num1 - num2;
         const resultElement = document.getElementById('subtraction');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
     }
 }
@@ -73,7 +106,18 @@ function multiplication(num1,num2) {
         const result = num1 * num2;
         const resultElement = document.getElementById('multiplication');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
     }
 }
@@ -95,7 +139,18 @@ function division(num1,num2) {
         const result = num1 / num2;
         const resultElement = document.getElementById('division');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
     }
 }
@@ -120,7 +175,18 @@ function findMin(arr) {
         const result = min;
         const resultElement = document.getElementById('min');
         resultElement.textContent = result;
-        resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+        resultElement.style.color = result < 0 ? 'red':'green';
+        if(result < 0 && result >= -10) {
+            return resultElement.style.color = 'rgb(248, 96, 96)';
+        } else if (result < -10 && result >= -100) {
+            return resultElement.style.color = 'rgb(228, 26, 26)';
+        } else if (result < -100 && result >= -1000) {
+            return resultElement.style.color = 'rgb(140, 14, 14)';
+        } else if ( result < -1000 && result >= -10000) {
+            return resultElement.style.color = 'rgb(87, 10, 10)';
+        } else if (result < -10000 && result >= -1000000) {
+            return resultElement.style.color = 'rgb(41, 3, 3)';
+        }
         return result; 
 }
 
@@ -136,7 +202,18 @@ function findMax(arr) {
     const result = max;
     const resultElement = document.getElementById('max');
     resultElement.textContent = result;
-    resultElement.style.color = `rgb(${Math.abs(result) * 10}, 0, 0)`;
+    resultElement.style.color = result < 0 ? 'red':'green';
+    if(result < 0 && result >= -10) {
+        return resultElement.style.color = 'rgb(248, 96, 96)';
+    } else if (result < -10 && result >= -100) {
+        return resultElement.style.color = 'rgb(228, 26, 26)';
+    } else if (result < -100 && result >= -1000) {
+        return resultElement.style.color = 'rgb(140, 14, 14)';
+    } else if ( result < -1000 && result >= -10000) {
+        return resultElement.style.color = 'rgb(87, 10, 10)';
+    } else if (result < -10000 && result >= -1000000) {
+        return resultElement.style.color = 'rgb(41, 3, 3)';
+    }
     return result; 
 }
 
