@@ -1,8 +1,8 @@
 function findMin(arr) {
-    let min = undefined;
+    let min = arr[0];
 
     for (let elem of arr) {
-        if (typeof elem === 'number' && (min === undefined || elem < min)) {
+        if (typeof elem === 'number' && (min === arr[0] || elem < min)) {
             min = elem;
         }
     }

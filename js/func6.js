@@ -1,8 +1,8 @@
 function findMax(arr) {
-    let max = undefined;
+    let max = arr[0];
 
     for (let i = 0; i < arr.length; i++) {
-     if(typeof arr[i] === 'number' && ( max === undefined || arr[i] > max)) {
+     if(typeof arr[i] === 'number' && ( max === arr[0] || arr[i] > max)) {
       max = arr[i];
      }
 }
