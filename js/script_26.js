@@ -34,13 +34,15 @@ function Accumulator(startingValue) {
 
  function CancelableAccumulator(startingValue) {
     Accumulator.call(this, startingValue);
-
-    this.clear = function(){
-        this.value = startingValue;
-    }
+    this.startingValue = startingValue;
  }
 
 CancelableAccumulator.prototype = Object.create(Accumulator.prototype);
+CancelableAccumulator.prototype.constructor = CancelableAccumulator;
+
+CancelableAccumulator.prototype.clear = function() {
+  this.value = this.startingValue;
+};
 
 
 // Перевірка
