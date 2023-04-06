@@ -1,43 +1,63 @@
-const arr2 = [2, 17, 'hello', 53, 15, 105, 'cat', 73, -7, 12, 0, 'js', 27];
-
-let biggestElem = Number.isNaN(arr2[0]); 
-for (let i = 0; i < arr2.length; i++) {
-    if (arr2[i] > biggestElem) {
-        biggestElem = arr2[i];
+function getSum(num1, num2) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+        return 'Arguments are not number type!';
     }
+
+    return sum = num1 + num2;
 }
 
 
+function getDifference(num1, num2) {
 
-const arr1 = [2, 17, 'hello', 53, 15, 105, 'cat', 73, -7, 12, 0, 'js', 27];
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+        return 'One of arguments is not a number type';
+    }
 
-let smallestElem = Number.isNaN(arr1[0]); 
+    return dif = num1 - num2;
+}
 
-
-for (let elem of arr1){
-   if (elem < smallestElem) {
-        smallestElem = elem;
+function getMul(num1, num2) {
+    
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+           return 'Arguments are not number type!';
+       }
+   
+       return prod = num1 * num2;
    }
+
+
+
+   function getDivision(num1, num2) {
+
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+        return 'One of arguments is not a number type';
+    } else if ( num2 === 0) {
+        return 'Division is impossible!';
+    }
+
+    return div = num1/num2;
 }
 
 
+function findMin(arr) {
+    let min = arr[0];
 
-
-
-const arr = [2, 17, 'hello', 53, 15, 105, 'cat', 73, -7, 12, 0, 'js', 27];
-
-let sum = 0;
-
-for ( let elem of arr ) {
-   if (typeof elem === 'number') {
-    sum += elem;
-   }
+    for (let elem of arr) {
+        if (typeof elem === 'number' && (min === arr[0] || elem < min)) {
+            min = elem;
+        }
+    }
+    return min;
 }
 
 
-let str = '';
+function findMax(arr) {
+    let max = arr[0];
 
-for (let i = 0; i < 5; i++) {
-    str += '#';
-    console.log(str);
+    for (let i = 0; i < arr.length; i++) {
+     if(typeof arr[i] === 'number' && ( max === arr[0] || arr[i] > max)) {
+      max = arr[i];
+     }
+}
+   return max;
 }
