@@ -20,7 +20,7 @@ for (let elem of arr1){
    }
 }
 
-console.log(smallestElem);
+
 
 
 
