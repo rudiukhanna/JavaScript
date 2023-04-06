@@ -81,11 +81,113 @@
 
 
 
+describe("Get value increment", () => {
+    const desc = "<p>Get value increment</p>";
+
+    describe(desc, () => {
+        it("should return 5", () => {
+            let acc = new Accumulator(4);
+            acc.increment();
+        expect(acc.value).toBe(5);
+    });
+
+  
+        it("should return 11", () => {
+        let acc = new Accumulator(10);
+        acc.increment();
+        expect(acc.value).toBe(11);
+    });
+    
+  }); 
+});
+
+
+
+
+
+
+
     describe("Get value increment", () => {
         const desc = "<p>Get value increment</p>";
 
         describe(desc, () => {
-            const result = acc.increment(1);
-            expect(result).toBe(2)
+            it("should return 5", () => {
+                let acc = new Accumulator(4);
+                acc.increment();
+            expect(acc.value).toBe(5);
         });
-    })
+
+      
+            it("should return 11", () => {
+            let acc = new Accumulator(10);
+            acc.increment();
+            expect(acc.value).toBe(11);
+        });
+        
+      }); 
+    });
+
+    describe("Get value decrement", () => {
+        const desc = "<p>Get value decrement</p>";
+
+        describe(desc, () => {
+            it("should return 3", () => {
+                let acc = new Accumulator(4);
+                acc.decrement();
+            expect(acc.value).toBe(3);
+        });
+
+      
+            it("should return 25", () => {
+            let acc = new Accumulator(26);
+            acc.decrement();
+            expect(acc.value).toBe(25);
+        });
+
+      }); 
+    });
+
+
+    describe("Check CancelableAccumulator constructor prototype (increment method)", () => {
+        const desc = "<p>Check CancelableAccumulator constructor prototype (increment method)</p>";
+
+        describe(desc, () => {
+            it("should return 2", () => {
+                let Cacc = new CancelableAccumulator(1);
+                Cacc.increment();
+            expect(Cacc.value).toBe(2);
+        });
+
+      
+            it("should return 11", () => {
+            let Cacc = new CancelableAccumulator(10);
+            Cacc.increment();
+            expect(Cacc.value).toBe(11);
+        });
+
+      }); 
+    });
+
+
+
+    describe("Check clear method", () => {
+        const desc = "<p>Check clear method</p>";
+
+        describe(desc, () => {
+            it("should return 4", () => {
+                let Cacc = new CancelableAccumulator(4);
+                Cacc.clear();
+            expect(Cacc.value).toBe(4);
+        });
+
+      
+            it("should return 12", () => {
+            let Cacc = new CancelableAccumulator(12);
+            Cacc.clear();
+            expect(Cacc.value).toBe(12);
+        });
+
+      }); 
+    });
+
+   

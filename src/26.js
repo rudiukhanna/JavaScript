@@ -7,7 +7,7 @@ function Accumulator(startingValue) {
         this.value = startingValue;  
  }
 
-
+ 
  Accumulator.prototype.increment = function() {
     this.value++;
  }
@@ -16,10 +16,6 @@ function Accumulator(startingValue) {
  Accumulator.prototype.decrement = function() {
     this.value--;
  }
-
-const acc = new Accumulator(1);
-console.log(acc())
-
 
 
 
@@ -35,7 +31,6 @@ CancelableAccumulator.prototype.clear = function() {
   this.value = this.startingValue;
 };
 
-const cAcc = new CancelableAccumulator(11);
 
 
 
