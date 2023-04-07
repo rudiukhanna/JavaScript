@@ -145,6 +145,52 @@ describe("Get value increment", () => {
         });
        });
       });
+
+
+
+      describe('Check scrollIntoView function', () => {
+          const desc = "<p>Check scrollIntoView function</p>";
+
+          describe(desc, () => {
+            it('should return ".summary" for "KeyA" or "KeyФ" event code', () => {
+                const event = new KeyboardEvent('keydown', { code: 'KeyA' });
+                expect(scrollIntoView(event)).toBe('.summary');
+            
+                const event2 = new KeyboardEvent('keydown', { code: 'KeyФ' });
+                expect(scrollIntoView(event2)).toBe('.summary');
+              });
+            
+              it('should return ".skills" for "KeyB" or "KeyИ" event code', () => {
+                const event = new KeyboardEvent('keydown', { code: 'KeyB' });
+                expect(scrollIntoView(event)).toBe('.skills');
+            
+                const event2 = new KeyboardEvent('keydown', { code: 'KeyИ' });
+                expect(scrollIntoView(event2)).toBe('.skills');
+              });
+            
+              it('should return ".work" for "KeyC" or "KeyС" event code', () => {
+                const event = new KeyboardEvent('keydown', { code: 'KeyC' });
+                expect(scrollIntoView(event)).toBe('.work');
+            
+                const event2 = new KeyboardEvent('keydown', { code: 'KeyС' });
+                expect(scrollIntoView(event2)).toBe('.work');
+              });
+            
+              it('should return ".education" for "KeyD" or "KeyВ" event code', () => {
+                const event = new KeyboardEvent('keydown', { code: 'KeyD' });
+                expect(scrollIntoView(event)).toBe('.education');
+            
+                const event2 = new KeyboardEvent('keydown', { code: 'KeyВ' });
+                expect(scrollIntoView(event2)).toBe('.education');
+              });
+          })
+      });
+
+   
+      
+
+      
+      
       
       
       
