@@ -121,8 +121,35 @@ describe("Get value increment", () => {
     });
 
 
+    describe("Simulate 'click'", () => {
+        const desc = "<p>Simulate 'click'</p>";
 
+        describe(desc, () => {
 
+            it("should toggle the photo class when called", function() {
+
+                let photo = document.createElement("div");
+                photo.id = "photo";
+                let isEnlarged = false;
+                spyOn(photo.classList, "toggle");
+            
+                isEnlarged = simulateClick(photo, isEnlarged);
+            
+                expect(photo.classList.toggle).toHaveBeenCalled();
+                expect(isEnlarged).toBe(true);
+            
+                isEnlarged = simulateClick(photo, isEnlarged);
+            
+                expect(photo.classList.toggle).toHaveBeenCalled();
+                expect(isEnlarged).toBe(false);
+        });
+       });
+      });
+      
+      
+      
+      
+      
       
       
       

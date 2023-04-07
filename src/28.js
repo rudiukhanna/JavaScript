@@ -1,8 +1,4 @@
-const photo = document.getElementById("photo");
-
-let isEnlarged = false;
-
-photo.addEventListener("click", function() {
+function simulateClick(photo, isEnlarged) {
   if (!isEnlarged) {
     photo.classList.toggle("photo-enlarge");
     isEnlarged = true;
@@ -10,7 +6,9 @@ photo.addEventListener("click", function() {
     photo.classList.toggle("photo-reduce");
     isEnlarged = false;
   }
-});
+  return isEnlarged;
+}
+
 
 
 const sectionTitles = document.querySelectorAll('.title');
